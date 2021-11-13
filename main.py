@@ -14,7 +14,7 @@ print("Server is up")
 while not is_closed:
     (client_socket, client_address) = server_socket.accept()
     print("Connected")
-    while (True):
+    while True:
         length = client_socket.recv(4).decode()
         if length.isnumeric() and length is not None:
             message = client_socket.recv(int(length)).decode()
